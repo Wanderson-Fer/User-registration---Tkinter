@@ -51,13 +51,12 @@ class Application:
                 label_cel = tk.Label(self.c_table)
                 if i == 0:
                     label_cel['text'] = header[j]
-                    label_cel['bg'] = 'gray'
                     label_cel['font'] = self.font_title
+                    label_cel['width'] = 15
+                    label_cel['height'] = 2
                 else:
                     label_cel['text'] = df_users.loc[i-1, columns[j]]
                     label_cel['font'] = self.font_default
-                label_cel['width'] = 15
-                label_cel['height'] = 2
                 label_cel.grid(row=i+1, column=j)
 
 
